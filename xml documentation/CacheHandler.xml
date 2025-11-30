@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.CacheHandler">
+        <description>
+            Класс CacheHandler предназначен для обработки аннотаций типа @Cache,
+            примененных к классам Java. Основная задача метода cacheVoid заключается
+            в проверке наличия аннотации @Cache у переданного объекта и выводе списка строковых значений,
+            указанных в аннотации.
+        </description>
+
+        <methods>
+            <method name="cacheVoid">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <throws>Exception</throws>
+                <description>
+                    Метод проверяет наличие аннотации @Cache у передаваемого объекта.
+                    Если аннотация присутствует, выводит её значения. Иначе сообщает об отсутствии аннотации.
+                </description>
+
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @Cache({"value1", "value2"})<br/>
+                            public void method() {}<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            CacheHandler.cacheVoid(example);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+</documentation>

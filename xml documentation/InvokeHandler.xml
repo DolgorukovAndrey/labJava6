@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.InvokeHandler">
+        <description>
+            Класс InvokeHandler предназначен для автоматической обработки аннотаций типа @Invoke,
+            применённых к методам объектов Java. Основная задача метода invokeVoid заключается
+            в поиске всех методов, помеченных аннотацией @Invoke, и их последующем вызове.
+        </description>
+
+        <methods>
+            <method name="invokeVoid">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <throws>Exception</throws>
+                <description>
+                    Метод ищет среди методов заданного объекта те, которые отмечены аннотацией @Invoke,
+                    устанавливает доступ к ним (если они приватные) и вызывает каждый найденный метод.
+                </description>
+
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @Invoke<br/>
+                            public void myAnnotatedMethod() {<br/>
+                            System.out.println("Метод вызван");<br/>
+                            }<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            InvokeHandler.invokeVoid(example);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+
+    <annotation name="org.example.ru.Dolgorukov.annotation.Invoke">
+        <description>
+            Аннотация предназначена для маркировки методов, которые должны автоматически вызываться
+            обработчиком InvokeHandler.
+        </description>
+    </annotation>
+</documentation>

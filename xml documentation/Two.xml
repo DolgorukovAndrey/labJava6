@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.Two">
+        <description>
+            Аннотация @Two применяется к типам (классам) и содержит два атрибута:
+            строковое значение 'first' и целочисленное значение 'second'.
+            Эти атрибуты предназначены для передачи дополнительной информации о настройках класса.
+        </description>
+    </annotation>
+</documentation>

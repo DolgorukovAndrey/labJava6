@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.ToString">
+        <description>
+            Аннотация @ToString применяется к типам (классам) и полям.
+            Определяет режим включения поля в автоматическое формирование строки методом toString.
+            Возможные значения режима: YES (включение), NO (исключение).
+        </description>
+    </annotation>
+</documentation>

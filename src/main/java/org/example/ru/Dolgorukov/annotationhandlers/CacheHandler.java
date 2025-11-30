@@ -2,6 +2,7 @@ package org.example.ru.Dolgorukov.annotationhandlers;
 
 import org.example.ru.Dolgorukov.annotation.Cache;
 
+
 public class CacheHandler {
     public static <T> void cacheVoid(T object) throws Exception {
         Class<?> targetClass = object.getClass();

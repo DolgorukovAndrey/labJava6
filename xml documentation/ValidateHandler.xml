@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.ValidateHandler">
+        <description>
+            Класс ValidateHandler предназначен для обработки аннотации @Validate, применяемой к классам Java.
+            Задача метода validateVoid — проверить наличие аннотации @Validate у переданного объекта и вывести список классов,
+            указанных в аннотации.
+        </description>
+
+        <methods>
+            <method name="validateVoid">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <throws>Exception</throws>
+                <description>
+                    Метод проверяет наличие аннотации @Validate у переданного объекта.
+                    Если аннотация присутствует, извлекает указанные в аннотации классы и выводит их полные имена.
+                    Если аннотация отсутствует, отображается соответствующее сообщение.
+                </description>
+
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @Validate({MyValidatingClass1.class, MyValidatingClass2.class})<br/>
+                            // реализация класса...<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            ValidateHandler.validateVoid(example);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+</documentation>

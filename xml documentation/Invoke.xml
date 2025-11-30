@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.Invoke">
+        <description>
+            Аннотация @Invoke применяется к методам и служит маркером для специального обработчика,
+            указывая, что данный метод должен быть автоматически вызван при выполнении соответствующей операции.
+        </description>
+    </annotation>
+</documentation>

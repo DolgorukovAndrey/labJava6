@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.ToStringHandler">
+        <description>
+            Класс ToStringHandler предназначен для обработки аннотации @ToString, применяемой к классам и полям Java.
+            Задача метода toStringString — собрать строку, содержащую названия полей, отмеченные аннотацией @ToString,
+            либо все поля, если указана общая настройка YES для класса.
+        </description>
+
+        <methods>
+            <method name="toStringString">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <returns>String</returns>
+                <throws>Exception</throws>
+                <description>
+                    Метод собирает строку, состоящую из имен полей, отмеченных аннотацией @ToString,
+                    либо всех полей, если указано значение YES для самого класса.
+                    Возвращает пустую строку, если аннотация не найдена ни на одном поле или классе.
+                </description>
+
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @ToString(Mode.YES)<br/>
+                            private int id;<br/>
+                            private String name;<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            String result = ToStringHandler.toStringString(example);<br/>
+                            System.out.println(result);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+</documentation>

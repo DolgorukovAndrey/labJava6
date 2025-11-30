@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.Cache">
+        <description>
+            Аннотация @Cache применяется к типам (классам).
+            Предназначена для хранения массива строковых значений, используемых для управления кешированием.
+        </description>
+    </annotation>
+</documentation>

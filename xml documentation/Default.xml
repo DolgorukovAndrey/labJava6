@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.Default">
+        <description>
+            Аннотация @Default применяется к типам (классам) и полям.
+            Содержит ссылку на класс, используемый в качестве значения по умолчанию.
+        </description>
+    </annotation>
+</documentation>

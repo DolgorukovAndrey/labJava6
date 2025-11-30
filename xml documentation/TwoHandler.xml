@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.TwoHandler">
+        <description>
+            Класс TwoHandler предназначен для обработки аннотации @Two, применяемой к классам Java.
+            Основная задача метода twoVoid — извлечь и вывести значения атрибутов аннотации @Two, если такая аннотация присутствует.
+        </description>
+        <methods>
+            <method name="twoVoid">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <throws>Exception</throws>
+                <description>
+                    Метод проверяет наличие аннотации @Two у переданного объекта.
+                    Если аннотация присутствует, извлекает её значения атрибута 'first' (строку)
+                    и атрибута 'second' (целое число) и выводит их на экран.
+                    Если аннотация отсутствует, отображает соответствующее сообщение.
+                </description>
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @Two(first = "Привет", second = 42)<br/>
+                            // реализация класса...<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            TwoHandler.twoVoid(example);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+</documentation>

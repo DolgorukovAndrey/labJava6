@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.additionalclasses.TestAnnotaion">
+        <description>
+            Тестовый класс, демонстрирующий использование различных аннотаций.
+            Классу применены аннотации @Cache, @Two, @Validate, @ToString и @Default.
+            Поля и методы также используют соответствующие аннотации.
+        </description>
+        <annotations>
+            <annotation name="@Cache">
+                <values>{"string1", "string3"}</values>
+            </annotation>
+            <annotation name="@Two">
+                <attribute name="first">First</attribute>
+                <attribute name="second">2</attribute>
+            </annotation>
+            <annotation name="@Validate">
+                <values>{java.lang.String.class, java.lang.Integer.class}</values>
+            </annotation>
+            <annotation name="@ToString"/>
+            <annotation name="@Default">
+                <value>java.lang.String.class</value>
+            </annotation>
+        </annotations>
+
+        <fields>
+            <field name="string1">
+                <type>private String</type>
+                <annotation name="@ToString">
+                    <value>NO</value>
+                </annotation>
+            </field>
+            <field name="string2">
+                <type>private String</type>
+            </field>
+            <field name="string3">
+                <type>private String</type>
+            </field>
+        </fields>
+
+        <methods>
+            <method name="method1">
+                <annotation name="@Invoke"/>
+                <description>
+                    Метод выводит в консоль строчку "метод 1"
+                </description>
+            </method>
+            <method name="method2">
+                <description>
+                    Метод выводит в консоль строчку "метод 2"
+                </description>
+            </method>
+            <method name="method3">
+                <description>
+                    Метод выводит в консоль строчку "метод 3"
+                </description>
+            </method>
+        </methods>
+    </class>
+</documentation>

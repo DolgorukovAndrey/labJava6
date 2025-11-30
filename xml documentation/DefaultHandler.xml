@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <class name="org.example.ru.Dolgorukov.annotationhandlers.DefaultHandler">
+        <description>
+            Класс DefaultHandler предназначен для обработки аннотации @Default, применяемой к классам Java.
+            Основной задачей метода defaultVoid является проверка наличия аннотации @Default у переданного объекта
+            и получение указанного в аннотации класса.
+        </description>
+
+        <methods>
+            <method name="defaultVoid">
+                <parameters>
+                    <parameter type="T">object</parameter>
+                </parameters>
+                <throws>Exception</throws>
+                <description>
+                    Метод проверяет наличие аннотации @Default у переданного объекта.
+                    Если аннотация присутствует, извлекается указанный в аннотации класс и выводится его полное имя.
+                    Если аннотация отсутствует, отображается сообщение об этом.
+                </description>
+
+                <examples>
+                    <example>
+                        <code>
+                            public class Example {<br/>
+                            @Default(MyDefaultClass.class)<br/>
+                            // реализация класса...<br/>
+                            }<br/><br/>
+
+                            Example example = new Example();<br/>
+                            try {<br/>
+                            DefaultHandler.defaultVoid(example);<br/>
+                            } catch(Exception e){<br/>
+                            e.printStackTrace();<br/>
+                            }
+                        </code>
+                    </example>
+                </examples>
+            </method>
+        </methods>
+    </class>
+</documentation>

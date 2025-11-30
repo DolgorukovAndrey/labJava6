@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documentation>
+    <annotation name="org.example.ru.Dolgorukov.annotation.Validate">
+        <description>
+            Аннотация @Validate применяется к типам (классам) и другим аннотациям.
+            Хранит массив ссылок на классы, предназначенные для целей валидации (например, правила проверки данных).
+        </description>
+    </annotation>
+</documentation>
